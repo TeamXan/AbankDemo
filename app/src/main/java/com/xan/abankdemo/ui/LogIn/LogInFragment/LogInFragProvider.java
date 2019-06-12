@@ -6,5 +6,5 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public abstract class LogInFragProvider {
     @ContributesAndroidInjector(modules = LogInFragModule.class)
-    abstract LogFragment provideAboutFragmentFactory();
+    abstract LogFragment provideLogInFragFactory();
 }

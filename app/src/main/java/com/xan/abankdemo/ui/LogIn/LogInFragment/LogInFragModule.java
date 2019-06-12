@@ -7,7 +7,7 @@ import dagger.Provides;
 @Module
 public class LogInFragModule {
     @Provides
-    ViewModelProviderFactory provideSplashViewModel() {
+    ViewModelProviderFactory provideLogInViewModel() {
         return new ViewModelProviderFactory();
     }
 }
