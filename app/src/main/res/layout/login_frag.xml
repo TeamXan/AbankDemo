@@ -25,6 +25,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="100dp"
             android:text="Log In"
+            android:onClick="@{()-> viewModel.goLogin()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -51,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Name"
-                android:text=""/>
+                android:text="@={viewModel.username}"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -69,7 +70,8 @@
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password" />
+                android:hint="Password"
+                android:text="@={viewModel.password}"/>
         </android.support.design.widget.TextInputLayout>
     </android.support.constraint.ConstraintLayout>
 </layout>

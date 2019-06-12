@@ -7,4 +7,5 @@ public class LogInViewModel extends BaseViewModel {
 
     public LogInViewModel() {
     }
+
 }

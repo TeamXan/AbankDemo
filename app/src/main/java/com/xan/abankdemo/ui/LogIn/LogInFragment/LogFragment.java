@@ -1,9 +1,11 @@
 package com.xan.abankdemo.ui.LogIn.LogInFragment;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.databinding.ObservableField;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import com.xan.abankdemo.BR;
 import com.xan.abankdemo.R;
@@ -14,7 +16,8 @@ import com.xan.abankdemo.utili.ViewModelProviderFactory;
 
 import javax.inject.Inject;
 
-public class LogFragment extends BaseFragment<LoginFragBinding,LogInFragmentViewModel> {
+public class LogFragment extends BaseFragment<LoginFragBinding,LogInFragmentViewModel>implements LogInNavigator {
+
     @Inject
     ViewModelProviderFactory factory;
     private LogInFragmentViewModel logInFragmentViewModel;
@@ -45,6 +48,13 @@ public class LogFragment extends BaseFragment<LoginFragBinding,LogInFragmentView
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        logInFragmentViewModel.setNavigator(this);
+
+
+    }
+    public void showToast(String username,String password) {
+        Toast.makeText(getActivity(), "User Name !"+username+" Password !"+password,
+                Toast.LENGTH_LONG).show();
 
     }
 }

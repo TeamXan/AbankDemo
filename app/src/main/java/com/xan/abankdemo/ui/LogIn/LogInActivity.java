@@ -10,11 +10,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.xan.abankdemo.BR;
 import com.xan.abankdemo.R;
 import com.xan.abankdemo.databinding.ActivityLogInBinding;
 import com.xan.abankdemo.ui.LogIn.LogInFragment.LogFragment;
+import com.xan.abankdemo.ui.LogIn.LogInFragment.LogInNavigator;
 import com.xan.abankdemo.ui.base.BaseActivity;
 import com.xan.abankdemo.utili.ViewModelProviderFactory;
 
@@ -75,4 +77,11 @@ public class LogInActivity extends BaseActivity<ActivityLogInBinding,LogInViewMo
                 .add(R.id.screenContainer, LogFragment.newInstance(), LogFragment.TAG)
                 .commit();
     }
+
+
+   /* @Override
+    public void showToast() {
+        Toast.makeText(this, "+",
+                Toast.LENGTH_LONG).show();
+    }*/
 }
